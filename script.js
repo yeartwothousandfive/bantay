@@ -100,15 +100,22 @@ document.addEventListener('DOMContentLoaded', () => {
         updateInputDisplay();
     });
 
-    newButton.addEventListener('click', () => {
+    newButton.addEventListener("click", () => {
+    const userConfirmed = confirm("Are you sure you want to create a new entry?");
+    
+    if (userConfirmed) {
         currentInput = '0';
         total = 0;
         operator = null;
         history = [];
-        historyLog.innerHTML = ''; // Clear history display
+        historyLog.innerHTML = '';
         updateInputDisplay();
         updateTotalDisplay();
-    });
+        console.log("New entry created.");
+    } else {
+        console.log("Action canceled.");
+    }
+});
 
     // --- Initial Setup ---
     updateTotalDisplay();
