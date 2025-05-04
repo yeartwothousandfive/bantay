@@ -1,0 +1,180 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding-top: 20px; /* Add some padding at the top */
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px; /* Limit max width for better appearance */
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+header h1 {
+    margin: 0 0 5px 0;
+    font-size: 1.5em;
+}
+
+#date-display {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.calculator {
+    margin-bottom: 20px;
+}
+
+.display {
+    background-color: #eee;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.display .total-label,
+.display .input-label {
+    font-size: 0.8em;
+    color: #666;
+    margin-bottom: 2px;
+}
+
+.display input {
+    width: calc(100% - 10px); /* Adjust width considering padding */
+    padding: 8px 5px;
+    font-size: 1.8em;
+    text-align: right;
+    border: none;
+    background-color: transparent;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.numpad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    flex-grow: 3; /* Numpad takes more space */
+}
+
+.operators {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-grow: 1; /* Operators take less space */
+}
+
+button {
+    padding: 15px;
+    font-size: 1.2em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #e0e0e0;
+}
+
+button:active {
+    background-color: #d0d0d0;
+}
+
+#clear-btn {
+    background-color: #ffdddd;
+}
+
+#clear-btn:hover {
+    background-color: #ffcccc;
+}
+
+.operator-btn.large-btn {
+    padding: 25px 15px; /* Make operator buttons taller */
+    font-size: 1.5em;
+    font-weight: bold;
+    background-color: #d4eaff;
+}
+
+.operator-btn.large-btn:hover {
+    background-color: #bce0ff;
+}
+
+/* #undo-btn {
+    background-color: #fffacd;
+}
+
+#undo-btn:hover {
+    background-color: #fff0a0;
+} */
+
+.history-section {
+    border-top: 1px solid #ccc;
+    padding-top: 15px;
+}
+
+.history-section h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+#history-log {
+    height: 100px;
+    overflow-y: auto;
+    border: 1px solid #eee;
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: #fdfdfd;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+#save-history-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #d4ffd4;
+}
+
+#save-history-btn:hover {
+    background-color: #bcf0bc;
+}
+
+/* Responsive adjustments if needed */
+@media (max-width: 350px) {
+    button {
+        padding: 12px;
+        font-size: 1em;
+    }
+    .operator-btn.large-btn {
+        padding: 20px 10px;
+        font-size: 1.3em;
+    }
+    .display input {
+        font-size: 1.5em;
+    }
+}
